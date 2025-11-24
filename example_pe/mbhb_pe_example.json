@@ -1,0 +1,76 @@
+{
+  "source_params": {
+    "M": 5e6,
+    "q": 4.0,
+    "chi1": 0.7,
+    "chi2": 0.4,
+    "Deltat": 0.0,
+    "dist": 59046.10457286159,
+    "inc": 1.0471975511965976,
+    "phi": 1.2,
+    "lambda": 0.5,
+    "beta": 0.9,
+    "psi": 2.7,
+    "Lframe": true
+  },
+
+  "waveform_params": {
+    "minf": 1e-5,
+    "maxf": 0.5,
+    "t0": 0.0,
+    "timetomerger_max": 2.0,
+    "fstart22": null,
+    "fend22": null,
+    "tmin": null,
+    "tmax": null,
+    "modes": null,
+    "TDI": "TDIAET",
+    "order_fresnel": 0,
+    "approximant": "IMRPhenomXHM",
+    "LISAconst": "Proposal",
+    "responseapprox": "full",
+    "frozenLISA": false,
+    "TDIrescaled": true,
+    "LISAnoise": {
+        "InstrumentalNoise": "SciRDv1",
+        "WDbackground": true,
+        "WDduration" : 4.0,
+        "lowf_add_pm_noise_f0": 0.0,
+        "lowf_add_pm_noise_alpha": 2.0
+    }
+  },
+
+  "prior_params": {
+    "list_params": ["Mchirp", "q", "chip", "chim", "Deltat", "dist", "inc", "phi", "lambda", "beta", "psi"],
+    "infer_params": ["Mchirp", "q", "chip", "chim", "Deltat", "dist", "inc", "phi", "lambda", "beta", "psi"],
+    "params_range": [[1e6, 1e7], [1.0, 10.0], [-1.0, 1.0], [-1.0, 1.0], [-600.0, 600.0], [10e3, 100e3], [], [], [], [], []],
+    "prior_type": ["uniform", "uniform", "uniform", "uniform", "uniform", "uniform", "sin", "uniform", "uniform", "cos", "uniform"],
+    "wrap_params": null
+  },
+
+  "run_params": {
+    "out_dir": "/Users/marsat/Projects/tutorials/lisabeta_sky_tutorial/lisabeta_sky_tutorial/example_pe/",
+    "out_name": "mbhb_pe_example",
+    "sampler": "ptemcee",
+    "sample_Lframe": true,
+    "multimodal": true,
+    "multimodal_pattern": "8modes",
+    "p_jump": 0.5,
+    "likelihood_method": "residuals",
+    "likelihood_residuals_ngrid": 128,
+    "skip_fisher": false,
+    "init_method": "fisher",
+    "init_scale_cov": 100.0,
+    "zerolike": false,
+    "n_temps": 4,
+    "temp_max": 100.0,
+    "n_walkers": 64,
+    "n_iter": 4000,
+    "burn_in": 1000,
+    "autocor_method": "autocor_new",
+    "thin_samples": false,
+    "seed": 0,
+    "output": true,
+    "output_raw": true
+  }
+}

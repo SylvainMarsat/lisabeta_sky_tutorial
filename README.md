@@ -11,42 +11,14 @@ Clone the repository:
 git clone https://github.com/SylvainMarsat/lisabeta_sky_tutorial.git
 ```
 
-Create and activate a `conda` environment as
-```
-conda create -n lisabeta_sky_tutorial -c conda-forge python=3.12
-conda activate lisabeta_sky_tutorial
-```
+The lisabeta code is available here:
+https://gitlab.in2p3.fr/marsat/lisabeta
 
-Use `pip` to install dependencies, either by hand:
-```
-pip install numpy scipy h5py matplotlib ipython jupyterlab tqdm corner
-```
-or using the `requirements.txt` file:
-```
-python -m pip install -r requirements.txt
-```
-
-We can also use `conda` to install all dependencies when creating the environment (can be slow!):
-```
-conda env create --name gwda_tutorial --file=environment.yml
-```
-
-To install lisabeta itself:
-```
-pip install git+https://gitlab.in2p3.com/marsat/lisabeta
-```
-
-To install the sampler `ptemcee` from a specific fork:
-```
-pip install git+https://github.com/SylvainMarsat/ptemcee
-```
+Please follow the installation instructions in the README there.
 
 Launch the jupyter notebook locally:
 ```
-jupyter-lab lisa_mbhb_sky_tutorial_1.ipynb
+jupyter-lab lisa_mbhb_sky_tutorial.ipynb
 ```
 
 You can also click on the link at the top of the notebook if you wish to run it in Goggle Colab.
-
-Alternatively, click on the badge below to run inside Binder:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SylvainMarsat/gwda_tutorial/HEAD?urlpath=%2Fdoc%2Ftree%2Ftutorial_1.ipynb)
